@@ -32,10 +32,16 @@ def main():
         (check_root_full, "root partition full.")
     ]
 
+    everything_ok = True
+
     for check, msg in checks:
         if check():
             print(msg)
-            sys.exit(1)
+            everything_ok = False
+
+    if not everything_ok:
+        sys.exit(1)
+
     print("Everythin is ok...")
     sys.exit(0)
 
