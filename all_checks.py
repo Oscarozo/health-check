@@ -32,5 +32,4 @@ def main():
     sys.exit(0)
 
 
-# and now for something completely different
 main()
